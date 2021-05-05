@@ -1,0 +1,168 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oliver Cabral</title>
+        <meta charset="utf-8">
+        <style>
+            .text{
+                background-color: #61d7a4;
+                color: #666666;
+                font-family: Arial;
+                font-size: 14pt;
+                border: 1px solid #000000;
+                border-radius: 5px;
+            }
+            .button{
+                background-color: #990000;
+                color: #ffffff;
+                font-family: Arial;
+                border: 2px solid #660000;
+                padding: 10px;
+                border-radius: 5px;
+            }
+            .center{
+                text-align: center;
+            }
+            body{
+                background-color: #a62f00;
+                font-family: Arial;
+            }
+            header{
+                width: 600px;
+                height: 60px;
+                margin: auto;
+                margin-bottom: 10px;
+                background-color: #ff9b73;
+                text-align: center;
+                border-radius: 10px;
+                color: #a62f00;
+            }
+            h1{
+                line-height: 50px;
+            }
+            option{
+                background-color: #61d7a4;
+            }
+            section{ 
+                width: 900px; <!--On the lab it says 800px, I changed it to 800px since the table dosent fit into the section based on my browser-->
+                min-height: 100px;
+                margin: auto;
+                background-color: #bf5930;
+                border: 2px solid #000000;
+                border-radius: 10px;
+                padding: 5px;
+                text-align: center;
+            }
+            select{
+                background-color: #61d7a4;
+                border-radius: 5px;
+                font-size: 14pt;
+                border: 1px solid #000000;
+            }
+            table{
+                margin: auto;
+            }
+            td{
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Online Computer Survey</h1>
+        </header>
+        <section>
+            <form method="POST" action="http://www.ieclass.com/jslabs/lab2-4.php">
+                <input type="hidden" name="labcode" value=3287>
+                <table>
+                    <tr>
+                        <td>Your Name:</td>
+                        <td><input type="text" name="sender" class="text"></td>
+                        <td>Email:</td>
+                        <td><input type="email" name="email" class="text"></td>
+                    </tr>
+                    <tr>
+                        <td>What Processor do you use?</td>
+                        <td>
+                            <input type="radio" name="processor" value="Pentium">Pentium
+                            <input type="radio" name="processor" value="Mac">Mac
+                            <input type="radio" name="processor" value="AMD">AMD
+                        </td>
+                        <td>What is the speed of your Processor</td>
+                        <td>
+                            <select name="speed">
+                                <option value="1Ghz" selected>1Ghz</option>
+                                <option value="1.2Ghz">1.2Ghz</option>
+                                <option value="1.6Ghz">1.6Ghz</option>
+                                <option value="1.8Ghz">1.8Ghz</option>
+                                <option value="2.0Ghz">2.0Ghz</option>
+                                <option value="2.2Ghz">2.2Ghz</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">What do you use your computer for?</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="checkbox" name="wordProcessing">Word Processing
+                            <br>
+                            <input type="checkbox" name="games">Games
+                        </td>
+                        <td>
+                            <input type="checkbox" name="internet">Internet
+                            <br>
+                            <input type="checkbox" name="email">Email
+                        </td>
+                        <td>
+                            <input type="checkbox" name="research">Research
+                            <br>
+                            <input type="checkbox" name="webDesign">Web Design
+                        </td>
+                        <td>
+                            <input type="checkbox" name="onlineBanking">Online Banking
+                            <br>
+                            <input type="checkbox" name="other">Other
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3">Do you plan on purchasing another computer any time soon?</td>
+                        <td>
+                            <select name="newcomp">
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">What peripherals do you have?</td>
+                    </tr>
+                    <tr>
+                        <td><input type="checkbox" name="scanner">Scanner</td>
+                        <td><input type="checkbox" name="printer">Printer</td>
+                        <td><input type="checkbox" name="camera">Digital Camera</td>
+                        <td><input type="checkbox" name="flatScreen">Flat Screen</td>
+                    </tr>
+                    <tr>
+                        <td>Internet:</td>
+                        <td><input type="radio" name="internet" value="Broadband">Broadband</td>
+                        <td><input type="radio" name="internet" value="Dial-Up">Dial-Up</td>
+                        <td><input type="radio" name="internet" value="None">None</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <textarea cols="90" rows="5" placeholder="Additional Comments" name ="comments" class="text"></textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="center" colspan="4">
+                            <input type="submit" value="Submit Survery" class="button">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="reset" value="Clear Form" class="button">
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

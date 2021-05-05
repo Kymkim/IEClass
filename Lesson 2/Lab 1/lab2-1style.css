@@ -1,0 +1,53 @@
+.text{
+    background-color: #ffffcc;
+    color: #000099;
+    font-family: Arial;
+    font-size: 14pt;
+    border: 1px solid #000099;
+    border-radius: 10px;
+}
+.button{
+    background-color: #99ccff;
+    color: #660000;
+    font-family: Arial;
+    border: 2px solid #660000;
+    padding: 2px;
+    border-radius: 5px;
+}
+.center{
+    text-align: center;
+}
+body{
+    background-color: #3399ff;
+    color: 000099;
+    font-family: Arial;
+}
+header{
+    width: 600px;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 10px;
+    text-align: center;
+    border-radius: 10px;
+    color: #ffffff;
+}
+h1{
+    line-height: 50px;
+}
+section{
+    width: 600px;
+    min-height: 100px;
+    margin: auto;
+    background-color: #addeee;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    padding: 1px;
+    text-align: center;
+}
+table{
+    width: 550px;
+    margin: auto;
+}
+td{
+    text-align: left;
+}
