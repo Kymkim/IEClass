@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 5-4c</title>
+        <meta charset="utf-8">
+        <script>
+            var bground = 0;
+            var greeting = "JavaScript Random Background Colors";
+
+            function getColor() {
+                var red = Math.random() * 10;
+                var newred = Math.floor(red);
+                var green = Math.random() * 10;
+                var newgreen = Math.floor(green);
+                var blue = Math.random() * 10;
+                var newblue = Math.floor(blue);
+                bground = "#" + newred + newred + newgreen + newgreen + newblue + newblue;
+                document.body.style.backgroundColor = bground;
+            }
+        </script>
+    </head>
+    <body>
+        <script>
+            document.write("<h1 style='text-align: center' >" + greeting + "</h1>");
+        </script>
+        <div style="text-align: center">
+            <span onclick="getColor()">Click HERE to Change Background</span>
+        </div>
+        <div style="text-align: center">
+            <script>
+                document.write("<div style=”text-align: center”>"); document.write("Document last updated on " + document.lastModified); document.write("</div>");
+            </script>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Oliver Cabral</title>
+        <script>
+            var player = 0;
+            var dealer1 = 0;
+            var dealer2 = 0;
+            function dealer() {
+                document.cardtable.deal.disabled = false;
+                dealer1 = randInt(1, 11);
+                dealer2 = randInt(1, 11);
+                player = randInt(2, 22);
+                document.cardtable.dealer1.value = dealer1;
+                document.cardtable.dealer2.value = "hidden";
+                document.cardtable.player.value = player;
+            }
+            function stand() {
+                document.cardtable.dealer2.value = dealer2;
+                document.cardtable.deal.disabled = true;
+            }
+            function dealCard() {
+                card = randInt(1, 11);
+                player = player + card;
+                document.cardtable.player.value = player;
+            }
+            //just making things more easier
+            function randInt(min, max) {
+                return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+        </script>
+        <style>
+            body{
+                font-family: Arial;
+                background-image: url(cards.jpg);
+            }
+            section{
+                width: 600px;
+                height: 300px;
+                margin: auto;
+                background-color: #007929;
+                padding: 15px;
+                border-radius: 10px;
+                border: solid black 2px;
+            }
+            header{
+                width: 550px;
+                height: 50px;
+                margin: auto;
+                margin-bottom: 15px;
+                background-image: url(cards.jpg);
+                text-align: center;
+                border: 10px;
+                border: solid black 1px;
+            }
+            h1{
+                line-height: 10px
+            }
+            div{
+                width: 400px;
+                height: 300px;
+                float: left;
+            }
+            aside{
+                width: 200px;
+                height: 300px;
+                float: right;
+            }
+            table{
+                width: 400px;
+                font-weight: bold;
+                color: white;
+            }
+            .cards{
+                background-color: #62dd8d;
+                border: solid black 1px;
+                border-radius: 5px;
+                font-size: 14pt;
+                padding: 5px;
+            }
+            .button{
+                background-color: #009900;
+                width: 150px;
+                color: white;
+                font-weight: bold;
+                padding: 5px;
+                border-radius: 5px;
+                border: solid black 1px;
+                clear: both;
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body onload="dealer(); return false;">
+        <section>
+            <header>
+                <h1>Simple Blackjack</h1>
+            </header>
+            <form name="cardtable">
+                <div>
+                    <table>
+                        <tr>
+                            <td>
+                                Dealer Cards 
+                            </td>
+                            <td>
+                                <input class="cards" name="dealer1" size="5" disabled/>
+                                <input class="cards" name="dealer2" size="5" disabled/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Your Card Total
+                            </td>
+                            <td>
+                                <input class="cards" name="player" size="5" disabled/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <aside>
+                    <button class="button" name="deal" value="Deal Card" onclick="dealCard(); return false;">Deal Card</button>
+                    <button class="button" value="Stand" onclick="stand(); return false;">Stand</button>
+                    <button class="button" value="New Game" onclick="dealer(); return false;">New Game </button>
+                </aside>
+            </form>
+        </section>
+    </body>
+</html>

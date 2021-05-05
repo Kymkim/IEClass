@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4-5c</title>
+    <script>
+        var greeting = "Simple JavaScript Program";
+        function setBackground() {
+            document.body.style.backgroundColor = "#000000";
+            document.body.style.color = "#ffffff";
+        }
+        function lightBlue() {
+            document.body.style.backgroundColor = "#B6D8F2";
+        }
+        function thistle() {
+            document.body.style.backgroundColor = "#F4CFDF";
+        }
+        function steelBlue() {
+            document.body.style.backgroundColor = "#5784BA";
+        }
+        function darkSeaGreen() {
+            document.body.style.backgroundColor = "#ACE1A4";
+        }
+
+        //I added my favorite colors instead cuz the orginal burns my eyes
+    </script>
+    <style>
+        div {
+            border-radius: 3px;
+            border: solid 3px #000000;
+        }
+    </style>
+</head> 
+    <body id="body" onload="setBakground()">
+        <script id="title">
+            document.write("<h1 style='text-align: center'>" + greeting + "</h1>");
+        </script>
+        <section style="text-align: center">
+            <div style="background-color: #B6D8F2" onmouseover="lightBlue()">
+                Light Blue
+            </div>
+            &nbsp;
+            <div style="background-color: #F4CFDF" onmouseover="thistle()">
+                Thistle
+            </div>
+            &nbsp;
+            <div style="background-color: #5784BA" onmouseover="steelBlue()">
+                Steel Blue
+            </div>
+            &nbsp;
+            <div style="background-color: #ACE1A4" onmouseover="darkSeaGreen()">
+                Dark Sea Green
+            </div>
+        </section>
+    </body>
+</html>

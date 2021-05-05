@@ -1,0 +1,99 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Oliver Cabral</title>
+        <style>
+            body{
+                background-color: #86b32d;
+                font-family: Arial;
+            }
+            header{
+                width: 600px;
+                margin: auto;
+                margin-bottom: 10px;
+                padding: 5px;
+                background-color: #b9f73e;
+                border-radius: 10px;
+                border: solid #679b00 2px;
+                text-align: center;
+            }
+            section{
+                width: 400px;
+                height: 100px;
+                margin: auto;
+                padding: 20px;
+                background-color: #b9f73e;
+                border-radius: 10px;
+                border: solid #679b00 2px;
+                text-align: center;
+            }
+            table{
+                width: 400px;
+                text-align: left;
+            }
+            .text{
+                background-color: #c9f767;
+                border: solid #000000 1px;
+            }
+            .button{
+                background-color: #850046;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 5px;
+            }
+        </style>
+        <script>
+            function multiply(a, b) {
+                alert(a + " times " + b + " is " + (a * b));
+            }
+            function divide(a, b) {
+                alert(a + " divided by " + b + " is " + (a / b));
+            }
+            function subtract(a, b) {
+                alert(a + " minus " + b + " is " + (a - b));
+            }
+            function addition(a, b) {
+                alert(a + " plus " + b + " is " + (eval(a) + eval(b)));
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>Simple Calculator</h1>
+        </header>
+        <section>
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            Input the first number:
+                        </td>
+                        <td>
+                            <input class="text" name="num1" size="10" placeholder="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Input the second number:
+                        </td>
+                        <td>
+                            <input class="text" name="num2" size="10" placeholder="0">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button class="button" value="Multiply" onClick="multiply(num1.value, num2.value)">Multiply</button>
+                            <button class="button" value="Divide" onClick="divide(num1.value, num2.value)">Divide</button>
+                            <button class="button" value="Subtract" onClick="subtract(num1.value, num2.value)">Subtract</button>
+                            <button class="button" value="Addition" onClick="addition(num1.value, num2.value)">Addition</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

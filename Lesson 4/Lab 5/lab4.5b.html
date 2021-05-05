@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Lab 4-5b</title>
+    <script>
+        var welcome = "Welcome to this JavaScript WebPage!";
+        function multiplyNumbers() {
+            var num1 = prompt("Enter the first number", "");
+            var num2 = prompt("Enter the second number", "");
+            var product = num1 * num2;
+            alert(num1 + " times " + num2 + " is " + product);
+        }
+    </script>
+</head>
+<body>
+    <script>
+        document.write("<h1 style='text-align: center'>" + welcome + "</h1>");
+    </script>
+        <div style="text-align: center">
+            <span onclick="multiplyNumbers()">
+                Click to Run multiplyNumbers()
+            </span>
+        </div>
+    <script>
+        document.write("This document was last modified on" + document.lastModified());
+    </script>
+</body>
+</html>

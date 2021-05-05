@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Oliver Cabral</title>
+        <style>
+            body{
+                background-color: #03436a;
+                font-family: Arial;
+            }
+            article{
+                width: 500px;
+                padding: 20px;
+                margin: auto;
+                margin-top: 10px;
+                background-color: #64a8d1;
+                border: 3px solid  #000000;
+                border-radius: 15px;
+                font-size: 16px;
+                text-align: center;
+                color: #ffffff;
+            }
+            header{
+                width: 500px;
+                height: 50px;
+                margin: auto;
+                background-color: #64a8d1;
+                text-align: center;
+                border: 1px solid #000000;
+                color: #ffffff;
+            }
+            h1{
+                line-height: 10px;
+            }
+        </style>
+        <script>
+            function multiply() {
+                var num1 = 10;
+                var num2 = 5;
+                var num3 = num1 * num2;
+                document.write(num1 + " x " + num2 + " = " + num3);
+            }
+            function subtract() {
+                var num1 = 10;
+                var num2 = 5;
+                var num3 = num1 - num2;
+                document.write(num1 + " - " + num2 + " = " + num3);
+            }
+            function myName() {
+                var visitor = prompt("Please Enter Your Name", "");
+                document.write(visitor);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1><script>myName();</script></h1>
+        </header>
+        <article>
+            <script>multiply();</script>
+        </article>
+        <article>
+            <script>subtract();</script>
+        </article>
+    </body>
+</html>

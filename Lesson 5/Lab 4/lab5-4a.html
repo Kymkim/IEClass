@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 5-4a</title>
+        <meta charset="utf-8">
+        <style>
+            .original {
+                background-color: #ffffaa;
+                border: solid #000000 1px;
+                font-size: 12pt;
+            }
+
+            .copy {
+                background-color: #336699;
+                color: #ffffff;
+                border: solid #000000 1px;
+                font-weight: bold;
+                font-size: 12pt;
+            }
+        </style>
+        <script>
+            function copyText() {
+                var myText = document.thisForm.field1.value;
+                document.thisForm.field2.value = myText;
+            }
+        </script>
+    </head>
+    <body>
+        <form name="thisForm">
+            <textarea name="field1" rows="5" cols="50" onkeyup="copyText()" class="original"></textarea>
+            <br />
+            <textarea name="field2" rows="5" cols="50" class="copy" disabled></textarea>
+            <br />
+            <input type="reset" value="Clear Form">
+        </form>
+    </body>
+</html>

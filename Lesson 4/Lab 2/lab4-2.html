@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Oliver Cabral</title>
+        <style>
+            body{
+                background-color: #dddddd;
+                font-family: Arial;
+            }
+            section{
+                width: 650px;
+                min-height: 100px;
+                background-color: #ffffcc;
+                margin: auto;
+                margin-top: 10px;
+                border-radius: 20px;
+                padding: 20px;
+            }
+            article{
+                width: 150px;
+                padding: 30px;
+                border: 1px solid #000000;
+                cursor: pointer;
+                border-radius: 10px;
+                text-align: center;
+            }
+            header{
+                width: 650px;
+                margin: auto;
+                background-color: #000000;
+                text-align: center;
+                border-radius: 10px;
+                color: #ffffff;
+            }
+            h1{
+                line-height: 50px;
+            }
+        </style>
+        <script>
+            function goBlue() {
+                document.body.style.backgroundColor = "#5ccccc";
+                document.getElementById("mainHeading").style.color = "#5cccc";
+                alert(document.body.style.backgroundColor);
+            }
+            function goYellow() {
+                document.body.style.backgroundColor = "#ffde40";
+                document.getElementById("mainHeading").style.color = "#5cccc";
+                alert(document.body.style.backgroundColor);
+            }
+            function goGreen() {
+                document.body.style.backgroundColor = "#c7f83e";
+                document.getElementById("mainHeading").style.color = "#5cccc";
+                alert(document.body.style.backgroundColor);
+            }
+            function custom() {
+                var newColor = prompt("Please enter custom color", "#");
+                document.body.style.backgroundColor = newColor;
+                document.getElementById("mainHeading").style.color = newColor;
+                alert(document.body.style.backgroundColor);
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1 id="mainHeading">Changing Colors</h1>
+        </header>
+        <section>
+            <article style="float: left; background-color: #5ccccc;" onclick="goBlue()">
+                Blue
+            </article>
+            <article style="float: right; background-color: #ffde40;" onclick="goYellow()">
+                Yellow
+            </article>
+            <article style="margin: auto; background-color: #c7f83e;" onclick="goGreen()">
+                Green
+            </article>
+        </section>
+        <section>
+            <article style="margin: auto; background-color: #ffffff;" onclick="custom()">
+                Custom
+            </article>
+        </section>
+    </body>
+</html>

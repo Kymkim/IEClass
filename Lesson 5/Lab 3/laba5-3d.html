@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Oliver Cabral</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #ffd5cd;
+            padding-left: 25vw;
+            padding-right: 25vw;
+        }
+
+        section {
+            background-color: #efbbcf;
+            border: solid 5px #8675a9;
+            border-radius: 25px;
+            margin-top: 10px;
+        }
+
+        form {
+            width: 250px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        td {
+            border: solid #8675a9 3px;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: #c3aed6;
+        }
+
+        input {
+            background: #ffffcc;
+            width: 100px;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        header {
+            text-align: center;
+            background-color: #c3aed6;
+            border: solid 5px #8675a9;
+            border-radius: 25px;
+        }
+
+        button {
+            background-color: #595b83;
+            border: solid 2px #000000;
+            color: white;
+        }
+
+    </style>
+    <script>
+        function calculate(a, b) {
+            var grossPay = a * b;
+            var taxes = grossPay * .15;
+            var netPay = grossPay - taxes;
+            document.getElementById('pay').value = "$" + grossPay;
+            document.getElementById('tax').value = "$" + taxes;
+            document.getElementById('net').value = "$" + netPay;
+        }
+    </script>
+</head>
+    <body>
+        <header>
+            <h1>Payment Calculator</h1>
+        </header>
+        <section>
+            <form>
+                <table class="center">
+                    <tr>
+                        <td>Total Pay: </td>
+                        <td><input id="pay" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td>Taxes: </td>
+                        <td><input id="tax" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td>Net Pay: </td>
+                        <td><input id="net" disabled /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Pay Rate: </td>
+                        <td><input id="payRate" /></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Hours: </td>
+                        <td><input id="hours" /></td>
+                    </tr>
+                    <tr class="center">
+                        <td colspan="2"><button onClick="calculate(document.getElementById('payRate').value, document.getElementById('hours').value); return false;">Calculate</button></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>

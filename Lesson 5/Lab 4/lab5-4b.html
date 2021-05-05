@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Lab 5-4b</title>
+        <meta charset="utf-8">
+        <script>
+            var fg = '#ffffcc';
+            var bg = '#dddddd';
+            function set() {
+                document.body.style.color = fg;
+                document.body.style.backgroundColor = bg;
+            }
+            function changeColor(back, text) {
+                document.body.style.color = text;
+                document.body.style.backgroundColor = back;
+                fg = document.body.style.color;
+                bg = document.body.style.backgroundColor;
+                document.colorform.currentBackground.value = bg;
+                document.colorform.currentText.value = fg;
+            }
+        </script>
+    </head>
+    <body onload="set()">
+        <h1 align="center">Document Colors</h1>
+        <form name="colorform">
+            Current background color:
+            <script>
+                document.write("<input type='text' name='currentBackground' value=" + bg + " disabled>");
+            </script>
+            <br />
+            Current text color:
+            <script>
+                document.write("<input type='text' name='currentText' value=" + fg + " disabled>");
+            </script>
+            <br />
+            <hr />
+            Select a new background color:
+            <input type="text" name="background"/>
+            <br />
+            Select a new text color:
+            <input type="text" name="text" />
+            <br />
+            <input type="button" value="Change" onclick="changeColor(document.colorform.background.value, document.colorform.text.value)">
+        </form>
+    </body>
+</html>

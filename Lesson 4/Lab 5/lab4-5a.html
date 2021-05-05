@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Lab 4-5a</title>
+		<script>
+			var greeting = "Welcome to this JavaScript Web Page!";
+			function changeBackground(){
+				var back = prompt("Enter a new background color", "");
+				document.body.style.backgroundColor = back;
+			}
+			function changeFontColor(){
+				var font = prompt("Enter a new font color", "");
+				document.body.style.color = font;
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			document.write("<h1 style='text-align: center'>" + greeting + "</h1>");
+		</script>
+		<div style = "text-align: center">
+			<span onclick = "changeBackground()"> Click to Change Background </span> | <span onclick = "changeFontColor()"> Click to Change Fonts </span>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Oliver Cabral</title>
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        section {
+            width: 250px;
+            margin: auto;
+        }
+
+        td {
+            border: solid #000000 1px;
+            padding: 10px;
+        }
+
+        input {
+            background: #ffffcc;
+            width: 100px;
+        }
+
+        .center {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function calculate(a, b) {
+            document.getElementById('pay').value = "$" + (a * b);
+        }
+    </script>
+</head>
+    <body>
+        <section>
+            <form>
+                <table>
+                    <tr>
+                        <td>Total Pay: </td>
+                        <td><input id="pay" disabled/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Pay Rate: </td>
+                        <td><input id="payRate"/></td>
+                    </tr>
+                    <tr>
+                        <td>Enter Hours: </td>
+                        <td><input id="hours"/></td>
+                    </tr>
+                    <tr class="center">
+                        <td colspan="2"><button onClick="calculate(document.getElementById('payRate').value, document.getElementById('hours').value); return false;">Calculate</button></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+    </body>
+</html>
