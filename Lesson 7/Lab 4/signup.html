@@ -1,0 +1,60 @@
+<script src="script7-4.js"></script>
+<script>
+    startPage();
+    topMenu();
+</script>
+<header>
+    <h2>Sign Up for A Server</h2>
+    <img src="city.jpg">
+</header>
+<article>
+    <form method="POST" action="http://www.ieclass.com/jslabs/lab7-4.php">
+        <input hidden name="labcode" value="1098">
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input class="text" type="text" name="fname"></td>
+                <td>Last Name:</td>
+                <td><input class="text" type="text" name="lname"></td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><input class="text" type="text" name="address"></td>
+                <td>City:</td>
+                <td><input class="text" type="text" name="city"></td>
+            </tr>
+            <tr>
+                <td>State:</td>
+                <td><input class="text" type="text" name="state"></td>
+                <td>Zip Code:</td>
+                <td><input class="text" type="text" name="zip"></td>
+            </tr>
+            <tr>
+                <td>Server Type:</td>
+                <td colspan="3">
+                    <input type="radio" name="server"> Shared Server
+                    <input type="radio" name="server"> Dedicated Server
+                </td>
+            </tr>
+            <tr>
+                <td>Email Address:</td>
+                <td><input class="text" type="text" name="email"></td>
+                <td>Domain Name:</td>
+                <td><input class="text" type="text" name="domain"></td>
+            </tr>
+            <tr>
+                <td>Select Username:</td>
+                <td><input class="text" type="text" name="username"></td>
+                <td>Select Password:</td>
+                <td><input class="text" type="text" name="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center;"><button value="Register" class="button">Register</button></td>
+                <td colspan="2" style="text-align: center;"><button value="Start Over" class="button">Start Over</button></td>
+            </tr>
+        </table>
+    </form>
+</article>
+<script>
+    endPage();
+</script>

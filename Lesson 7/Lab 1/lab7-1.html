@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Oliver Cabral</title>
+        <style>
+            body{
+                font-family: Arial;
+                background-color: #cdcdcd;
+            }
+            section{
+                width: 400px;
+                height: 200px;
+                background-color: #1d7373;
+                margin: auto;
+                border-radius: 30px;
+                border: solid #000000 2px;
+                text-align: center; 
+            }
+            h2{
+                line-height: 50px;
+            }
+            input{
+                background-color: #a64b00;
+                padding: 15px;
+                font-size: 14pt;
+                border-radius: 5px;
+                border: solid #000000 1px;
+                color: white;
+            }
+        </style>
+        <script>
+            let background = [
+                "#ffffcc",
+                "#ccffff",
+                "#ccffcc",
+                "#ffb273",
+                "#5ccccc"
+            ]
+            function change() {
+                document.body.style.backgroundColor = background[Math.floor(Math.random() * 5)]
+            }
+        </script>
+    </head>
+    <body>
+        <section>
+            <header>
+                <h2>Background Color Array</h2>
+            </header>
+            <form>
+                <input type="button" value="Change Background" onclick="change()">
+            </form>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<script src="script7-4.js"></script>
+<script>
+    startPage();
+    topMenu();
+</script>
+<header>
+    <h2>Prices and Features</h2>
+</header>
+<article>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Shared</th>
+            <th>Dedicated</th>
+        </tr>
+        <script>
+            for(var i = 0; i < 10; i++)
+            {
+                document.write("<tr>");
+                document.write("<td>" + features[i] + "</td>");
+                document.write("<td>" + shared[i] + "</td>");
+                document.write("<td>" + dedicated[i] + "</td>");
+                document.write("</tr>");
+            }
+        </script>
+    </table>
+</article>
+<script>
+    endPage();
+</script>
