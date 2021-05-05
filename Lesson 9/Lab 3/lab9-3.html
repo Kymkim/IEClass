@@ -15,15 +15,35 @@
             }
             section
             {
-                width: 500px;
-                height: 500px;
+                width: 700px;
+                height: 400px;
                 margin: auto;
             }
         </style>
         <script>
             function draw()
             {
+                var draw = document.getElementById("canvas1").getContext("2d");
 
+                //Main
+                draw.fillStyle = "#393e46";
+                draw.fillRect(125, 150, 200, 125);
+                draw.fillRect(115, 150 + ((125/3)*2), 210, 125/3);
+                draw.fillRect(125 + 10, 150 - ((125/4) * 2), (200/3) - 10, (125/4) * 2);
+                draw.fillRect(225, 150 - (125/4), 100, (125/4));
+                
+                //Tow
+                draw.fillRect(400, 150 + (125/4), 200, 125 - (125/4));
+                draw.fillRect(325, 150 + ((125/3)*2), 75, (125/3)/1.5);
+
+                //Wheels
+                draw.beginPath();
+                draw.fillStyle = "#00adb5";
+                draw.arc(125 + (200/4), 150 + 125, 30, 0, Math.PI * 2, true);
+                draw.arc(125 + ((200/4) * 3), 150 + 125, 30, 0, Math.PI * 2, true);
+                draw.arc(400 + (200/4), 150 + 125, 30, 0, Math.PI * 2, true);
+                draw.arc(400 + ((200/4) * 3), 150 + 125, 30, 0, Math.PI * 2, true);
+                draw.fill();
             }
         </script>
     </head>
