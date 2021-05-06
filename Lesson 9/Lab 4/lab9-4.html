@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Oliver Cabral</title>
+        <meta charset="utf-8">
+
+        <style>
+            body{
+                background-color: #ffffcc;
+            }
+            canvas
+            {
+                background-color: #ffffff;
+                border: solid #000000 1px;
+            }
+            section
+            {
+                width: 500px;
+                height: 500px;
+                margin: auto;
+            }
+        </style>
+        
+        <script>
+
+
+            function draw()
+            {
+                var draw = document.getElementById("canvas1").getContext("2d");
+
+                draw.fillStyle = "rgba(225, 99, 146, 0.5)";
+                draw.fillRect(150,150,250,250);
+                draw.strokeRect(150,150,250,250);
+                draw.fillRect(75,75,250,250);
+                draw.strokeRect(75,75,250,250);
+
+                draw.beginPath()
+                draw.fillStyle = "rgba(114, 221, 247, 0.5)";
+                draw.moveTo(75,75);
+                draw.lineTo(150,150);
+                draw.lineTo(150,400);
+                draw.lineTo(75,325);
+                draw.closePath();
+                draw.stroke();
+                draw.fill();
+
+                draw.beginPath()
+                draw.moveTo(75,75);
+                draw.lineTo(150,150);
+                draw.lineTo(400,150);
+                draw.lineTo(325,75);
+                draw.closePath();
+                draw.stroke();
+                draw.fill();
+
+                draw.beginPath()
+                draw.moveTo(75,75);
+                draw.lineTo(150,150);
+                draw.lineTo(400,150);
+                draw.lineTo(325,75);
+                draw.closePath();
+                draw.stroke();
+                draw.fill();
+
+                draw.beginPath()
+                draw.moveTo(75,325);
+                draw.lineTo(325,325);
+                draw.lineTo(400,400);
+                draw.lineTo(150,400);
+                draw.closePath();
+                draw.stroke();
+                draw.fill();
+                
+                draw.beginPath()
+                draw.moveTo(325,75);
+                draw.lineTo(400,150);
+                draw.lineTo(400,400);
+                draw.lineTo(325,325);
+                draw.closePath();
+                draw.stroke();
+                draw.fill();
+                
+            }
+        </script>
+    </head>
+
+    <body onload="draw()">
+        <section>
+            <canvas width="500" height="500" id="canvas1">
+
+            </canvas>
+        </section>
+    </body>
+</html>
